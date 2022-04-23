@@ -8,9 +8,6 @@ import { Router } from '@angular/router';
 //Declaring the api url that will provide data for the client app
 const apiUrl = 'https://movie-api-v001.herokuapp.com';
 
-//get token from local storage
-
-
 //get username from localStorage
 const username = localStorage.getItem('username');
 
