@@ -14,12 +14,12 @@ const username = localStorage.getItem('username');
 @Injectable({
   providedIn: 'root'
 })
+// export class FetchApiDataService {
+
+//   constructor(private http: HttpClient) {}
+// }
+
 export class FetchApiDataService {
-
-  constructor(private http: HttpClient) {}
-}
-
-export class UserRegistrationService {
   // Inject the HttpClient module to the constructor params
  // This will provide HttpClient to the entire class, making it available via this.http
   constructor(private http: HttpClient) {
@@ -28,7 +28,7 @@ export class UserRegistrationService {
  // User registration endpoint
   public userRegistration(userDetails: any): Observable<any> {
     console.log(userDetails);
-    return this.http.post(apiUrl + 'users', userDetails).pipe(
+    return this.http.post(apiUrl + '/users/register', userDetails).pipe(
     catchError(this.handleError)
     );
   }
