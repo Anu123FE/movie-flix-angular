@@ -16,6 +16,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
+import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
 
 //Components
 
@@ -24,6 +25,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     AppComponent,
     UserRegistrationFormComponent,
+    UserLoginFormComponent,
   ],
   imports: [
     FormsModule,
