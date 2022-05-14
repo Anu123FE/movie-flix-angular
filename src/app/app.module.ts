@@ -17,6 +17,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FormsModule } from '@angular/forms';
 import { UserLoginFormComponent } from './user-login-form/user-login-form.component';
+import { MovieCardComponent } from './movie-card/movie-card.component';
 
 //Components
 
@@ -26,6 +27,7 @@ import { UserLoginFormComponent } from './user-login-form/user-login-form.compon
     AppComponent,
     UserRegistrationFormComponent,
     UserLoginFormComponent,
+    MovieCardComponent,
   ],
   imports: [
     FormsModule,
