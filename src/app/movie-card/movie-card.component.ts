@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { throws } from 'assert';
 import { FetchApiDataService } from '../fetch-api-data.service';
-import { UserRegistrationService } from '../fetch-api-data.service';
 import { MatDialog } from '@angular/material/dialog';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';

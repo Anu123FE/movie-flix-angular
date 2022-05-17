@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialogRef } from '@angular/material/dialog';
-import { UserRegistrationService  } from '../fetch-api-data.service';
+import { FetchApiDataService  } from '../fetch-api-data.service';
 
 
 @Component({
@@ -21,7 +21,7 @@ export class UserEditComponent implements OnInit {
   }
 
   constructor(
-    public fetchApiData: UserRegistrationService,
+    public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserEditComponent>,
     public snackBar: MatSnackBar
   ) { }
@@ -31,7 +31,7 @@ export class UserEditComponent implements OnInit {
   }
   getUser(): void {
     const user = localStorage.getItem('user');
-    this.fetchApiData.getUser(user).subscribe((resp: any) => {
+    this.fetchApiData.getUserProfile().subscribe((resp: any) => {
       this.user = resp;
       console.log(this.user);
       return this.user
@@ -39,7 +39,7 @@ export class UserEditComponent implements OnInit {
   }
   
   editUserProfile(): void {
-    this.fetchApiData.editUserProfile(this.userData).subscribe((resp) => {
+    this.fetchApiData.editUserProfile(this.userData).subscribe((resp: any) => {
       this.dialogRef.close();
       localStorage.setItem('user', resp.Username);
       this.snackBar.open('Profile update successful.', 'OK', {

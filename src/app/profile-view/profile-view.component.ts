@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 
-import { UserRegistrationService } from  '../fetch-api-data.service';
+import { FetchApiDataService } from  '../fetch-api-data.service';
 import { DirectorCardComponent } from '../director-card/director-card.component';
 import { GenreCardComponent } from '../genre-card/genre-card.component';
 import { SynopsisCardComponent } from '../synopsis-card/synopsis-card.component';
@@ -24,7 +24,7 @@ export class ProfileViewComponent implements OnInit {
 
   constructor(
   
-    public fetchApiData: UserRegistrationService,
+    public fetchApiData: FetchApiDataService,
     public snackBar: MatSnackBar,
     public dialog: MatDialog,
     private router: Router

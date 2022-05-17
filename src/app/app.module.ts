@@ -48,6 +48,8 @@ const appRoutes: Routes = [
     GenreCardComponent,
     SynopsisCardComponent,
     DirectorCardComponent,
+    ProfileViewComponent,
+    UserEditComponent
   ],
   imports: [
     MatIconModule,
