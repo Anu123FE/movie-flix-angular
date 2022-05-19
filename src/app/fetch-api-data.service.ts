@@ -143,9 +143,9 @@ export class FetchApiDataService {
 // User can update their profile
 editUserProfile(userData: object): Observable<any> {
   const token = localStorage.getItem('token');
-  const username = localStorage.getItem('username');
+  const username = localStorage.getItem('user');
   return this.http
-    .put(apiUrl + `users/${username}`, userData, {
+    .put(apiUrl + `/users/${username}`, userData, {
       headers: new HttpHeaders({
         Authorization: 'Bearer ' + token,
       }),
