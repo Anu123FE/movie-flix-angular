@@ -30,7 +30,6 @@ export class UserEditComponent implements OnInit {
     this.getUser();
   }
   getUser(): void {
-    const user = localStorage.getItem('user');
     this.fetchApiData.getUserProfile().subscribe((resp: any) => {
       this.user = resp;
       console.log(this.user);
