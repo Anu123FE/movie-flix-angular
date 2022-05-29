@@ -19,6 +19,7 @@ export class MovieCardComponent {
   movies: any[] = [];
   currentUser: any = null;
   currentFavs: any = null;
+  favIcon:string = "favorite_border";
 
   constructor(
     public fetchApiData: FetchApiDataService,
@@ -86,8 +87,8 @@ export class MovieCardComponent {
       console.log(res)
       const currentUser = res.Username
       console.log(currentUser)
-      const currentFavs = res.FavoriteMovies
-      console.log(currentFavs)
+      this.currentFavs = res.FavoriteMovies
+      console.log(this.currentFavs)
     });
   }
 
@@ -118,5 +119,22 @@ export class MovieCardComponent {
       console.log(res)
     });
     return this.getCurrentUser();
+  }
+
+  checkFav(id: string): boolean {
+    // const movieId = this.currentFavs
+  if(this.currentFavs.find((x:any) =>x === id) ) return true
+  else return false
+  //  console.log(this.currentFavs)
+  //   return true;
+  }
+
+  addRemoveMovieFromFavs(id: any, title: string) : void {
+    if (this.checkFav(id)) {
+      this.deleteFavoriteMovies(id, title)
+    }
+    else {
+      this.addToUserFavs(id, title)
+    }
   }
 }

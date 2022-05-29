@@ -18,6 +18,7 @@ export class UserEditComponent implements OnInit {
     Password: this.user.Password,
     Email: this.user.Email,
     Birthday: this.user.Birthday,
+    Favorites: this.user.FavoriteMovies
   }
 
   constructor(
