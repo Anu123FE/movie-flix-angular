@@ -1,4 +1,6 @@
-$backgroundColor: #fcf0f4;
+$backgroundColor: #D2B4DE;
+$background-image: "/../Users/anu/Documents/Project/movie-flix-angular/src/app/background.png";
+
 $cardColor: #66C3FF;
 $textColor: #003D66;
 $boxShadowColor: #006BB3;
@@ -9,6 +11,7 @@ $buttonColor: #001F33;
 }
 
 .main-page {
+    $backgroundColor: #D2B4DE;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -45,3 +48,4 @@ $buttonColor: #001F33;
     display: flex;
     justify-content: center;
 }
+
