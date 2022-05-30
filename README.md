@@ -39,8 +39,11 @@
 - Home Screen:
 <img width="1455" alt="Movie Screen" src="https://user-images.githubusercontent.com/80176993/171068369-2161afd6-8c97-4514-a4c9-c52409819b9d.png">
 
-- Adding/ Removing Movies To Favorite List (using the mat-icon):
+- Adding Movies To Favorite List (using the mat-icon):
 <img width="1499" alt="Added to List" src="https://user-images.githubusercontent.com/80176993/171068518-0bf7340c-1bb5-4668-88f0-341df7b1ff97.png">
+
+- Removing Movies From the Favorite List (using mat-icon):
+<img width="1391" alt="Remove movie" src="https://user-images.githubusercontent.com/80176993/171069098-615f073c-e530-4027-8f28-1106a35013f3.png">
 
 - Profile View:
 <img width="1022" alt="Profile View" src="https://user-images.githubusercontent.com/80176993/171068612-95c6075e-44ff-450c-91ba-500b4d66dbbb.png">
