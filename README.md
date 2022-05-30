@@ -45,6 +45,10 @@
 - Profile View:
 <img width="1022" alt="Profile View" src="https://user-images.githubusercontent.com/80176993/171068612-95c6075e-44ff-450c-91ba-500b4d66dbbb.png">
 
+ - Kanban Board I Used For This Project's Work:
+ <img width="1625" alt="Kanban Board" src="https://user-images.githubusercontent.com/80176993/171068770-687000d2-b440-4b96-8aec-c1973a7f2feb.png">
+
+
 
 
 ## Development server
