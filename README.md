@@ -4,7 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `ng serve` for a dev server. Navigate to [Here](https://anu123fe.github.io/movie-flix-angular/welcome). The application will automatically reload if you change any of the source files.
 
 ## Code scaffolding
 
