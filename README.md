@@ -8,9 +8,7 @@
 # User Stories:
  - As a user, I want to be able to register/ login to see the list of movies. I would also like to see the details of the movie's directors and genres so that I can decide which movies I like.
 - As a user, I want to be able to create a profile so I can add/ remove a movie from my favorite movies list
-- As a user, I want to be able to edit my profile so tat I can make any changes to my User Profile as needed
-
-
+- As a user, I want to be able to edit my profile so that I can make any changes to my User Profile as needed
 
 # Main Features:
 - Upon launch of the website, the user sees a welcome page, which has the options - Sign Up (for new users), Login (for returning users), All movies and Profile
