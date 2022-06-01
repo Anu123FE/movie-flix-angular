@@ -23,8 +23,43 @@
 - The user is also able to edit his/her profile details
 
 # Tech Used:
+  Angular is used for this project as it is most easily used for complex UIs (as is the case for this app) and also cause it has ready to use components   which come set up. It is easy to use, as me especially as a beginner developer, I did not have to write the skeletal framework of the components from     scratch.
  - Angular
  - Material Library
+
+# Challenges Faced and The Learning Experience:
+- Each endpoint needs its own component to be created. While creating the component was easy, it was difficult to link 1 component to the other. I had missed adding the correct imports and exports which I later rectified by trial and error
+- I faced a lot of issues routing the path to the correct endpoints, the end point path had to eb the exact same as was defined in the movieapi and this was a little tedious
+- I also found adding a background image to my welcome page really difficult. I found that the relative path I had added was wrong and I rectified this which lead to the resolution of this issue
+- Another aspect that I found really difficult was adding and removing a movie to/from a user's favorite movie list. I used the <mat-icon> feature of angular to resolve this but then I had to add in a logic which checked if a movie was included in the list and then it changed the mat-icon from an 'unfilled heart' to a 'filled heart' (or vice versa0 depending on whether the movie was being added to the list or removed from the list
+- The styling of the app also took a little time as I had to use SCSS which is a bit different from CSS
+- I realised how important it is to use Chrome DEV TOOLS. I used to have bugs caused due to typos in my code which are really card to find. Running the app on the local host and then inspecting the page using Chrome Dev Tools made debugging so much more easier
+  
+# End Points:
+  - New User registration
+  - User login
+  - Get all the movies in the database
+  - Get the details of a specific movie
+  - Get the details of the genre of the specific movie
+  - Get the details of the director of a specific movie
+  - Edit the user profile
+  - Delete the user profile
+  - Add a movie to a user's favorite list
+  - Remove a movie from a user's favorite list
+
+# Development Process:
+- Install Angular
+- Create a new Angular project
+- Navigate to project folder to run project
+- Install project to load data from the movie_api (database on MongoDB) using angular HttpClient
+- Add the imports to fetch-api-data.service.ts
+- Add in the code for linking the end points (mentioned above) to the respective components for all API calls
+- Install MaterialUI library
+- Use NgModule to complete the imports
+- Create components for each endpoint
+- Add routing
+- Commit and push all the commits to the GitHub repo linked to the project
+- Publish the project on GitHub pages using the -ghpages cli
 
 # Screen Shots Included:
 - Welcome Screen:
@@ -50,8 +85,6 @@
 
  - Kanban Board I Used For This Project's Work:
  <img width="1625" alt="Kanban Board" src="https://user-images.githubusercontent.com/80176993/171068770-687000d2-b440-4b96-8aec-c1973a7f2feb.png">
-
-
 
 
 ## Development server
