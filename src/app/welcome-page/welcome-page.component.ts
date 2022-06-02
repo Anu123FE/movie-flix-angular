@@ -11,28 +11,42 @@ import { UserEditComponent } from '../user-edit/user-edit.component';
   templateUrl: './welcome-page.component.html',
   styleUrls: ['./welcome-page.component.scss']
 })
+/**
+ * This class implements the welcome page
+ */
 export class WelcomePageComponent implements OnInit {
 
   constructor(public dialog: MatDialog) { }
   ngOnInit(): void {
   }
-  // This is the function that will open the dialog when the signup button is clicked
+  /**
+ * This is the function that will open the registeration dialog box when the signup button is clicked
+ */
   openUserRegistrationDialog(): void {
     this.dialog.open(UserRegistrationFormComponent, {
       width: '280px'
     });
   } 
+  /**
+ * This is the function that will open the login dialog box when the login button is clicked
+ */
 openUserLoginDialog(): void {
     this.dialog.open(UserLoginFormComponent, {
       width: '280px'
     });
   }
+  /**
+ * This is the function that will open the movie-cards when the all movies button is clicked
+ */
   openMoviesDialog(): void {
     this.dialog.open(MovieCardComponent, {
       width: '80%',
       height: '80%'
     });
   }
+  /**
+ * This is the function that will open the user profile dialog box when the profile button is clicked
+ */
   openProfileDialog() {
     this.dialog.open(UserEditComponent, {
       width: '50%',

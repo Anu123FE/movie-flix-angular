@@ -7,6 +7,10 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   templateUrl: './genre-card.component.html',
   styleUrls: ['./genre-card.component.scss']
 })
+/**
+ * This displays Genre's info
+ * @returns
+ */
 export class GenreCardComponent implements OnInit {
 
   constructor(

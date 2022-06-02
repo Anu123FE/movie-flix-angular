@@ -15,6 +15,10 @@ import { UserEditComponent } from '../user-edit/user-edit.component';
   templateUrl: './profile-view.component.html',
   styleUrls: ['./profile-view.component.scss']
 })
+
+/**
+ * This class is for viewing the user profile
+ */
 export class ProfileViewComponent implements OnInit {
   user: any = {};
   username: any = localStorage.getItem('user');
@@ -36,6 +40,10 @@ export class ProfileViewComponent implements OnInit {
     this.getFavoriteMovies();
   }
 
+  /**
+ * This is for getting the user profile
+ */
+
   getUserProfile(): void {
     const username = localStorage.getItem('user');
     if (username) {
@@ -46,6 +54,10 @@ export class ProfileViewComponent implements OnInit {
       });
     }
   }
+
+  /**
+ * this is to set the parameters of how the UserEdit dialog box should look like
+ */
 
   openEditUserProfile(): void {
     this.dialog.open(UserEditComponent, {
@@ -60,7 +72,10 @@ export class ProfileViewComponent implements OnInit {
       return this.favoriteMovies;
     });
   }*/
-
+  
+  /**
+ * This is to get the fav movies, seeing if the movie id is present in user's fav movie list
+ */
   getFavoriteMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -72,6 +87,12 @@ export class ProfileViewComponent implements OnInit {
     });
     console.log(this.favoriteMovies);
   }
+
+  /**
+ * This is to determine the synopsis dialog box parameters
+ * @params 
+ * @returns
+ */
 
   openSynopsis(title: string, imagePath: any, description: string): void {
     this.dialog.open(SynopsisCardComponent, {
@@ -85,6 +106,11 @@ export class ProfileViewComponent implements OnInit {
     });
   }
 
+  /**
+ * This is to set the parameters of the director's deatils dialog box
+ * @params
+ * @returns
+ */
   openDirectorDialog(title: string, name: string, bio: string, birth: string): void {
     this.dialog.open(DirectorCardComponent, {
       data: {
@@ -97,7 +123,9 @@ export class ProfileViewComponent implements OnInit {
       panelClass: 'director-custom'
     });
   }
-
+  /**
+ * This is for setting the parameters of the genre dialog box
+ */
   openGenreDialog(title: string, name: string, description: string): void {
     this.dialog.open(GenreCardComponent, {
       data: {
@@ -111,7 +139,9 @@ export class ProfileViewComponent implements OnInit {
     console.log('Name: ' + name)
   }
 
-  // Deletes a profile
+   /**
+ * This is for setting the user deletion
+ */
   deleteUserProfile(): void {
     if (confirm('Are your sure? This can\'t be undone.')) {
       this.router.navigate(['welcome']).then(() => {
@@ -126,7 +156,10 @@ export class ProfileViewComponent implements OnInit {
       });
     }
   }
-
+   
+  /**
+ * This is for removing a movie from the fav list
+ */
   deleteFavoriteMovies(MovieID: string, Title: string): void {
     this.fetchApiData.deleteFavoriteMovies(MovieID).subscribe((res: any) => {
       this.snackBar.open(`Successfully removed ${Title} from favorite movies.`, 'OK', {

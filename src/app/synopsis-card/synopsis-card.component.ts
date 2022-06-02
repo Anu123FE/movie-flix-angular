@@ -6,6 +6,10 @@ import { MAT_DIALOG_DATA } from '@angular/material/dialog';
   templateUrl: './synopsis-card.component.html',
   styleUrls: ['./synopsis-card.component.scss']
 })
+
+/**
+ * This gives the details of a particular movie
+ */
 export class SynopsisCardComponent implements OnInit {
 
   constructor(

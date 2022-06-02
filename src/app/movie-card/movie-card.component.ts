@@ -13,6 +13,10 @@ import { SynopsisCardComponent } from '../synopsis-card/synopsis-card.component'
   templateUrl: './movie-card.component.html',
   styleUrls: ['./movie-card.component.scss']
 })
+
+/**
+ * This displays a single movie's info
+ */
 export class MovieCardComponent {
   user: any[] = [];
   Username = localStorage.getItem('user');
@@ -32,7 +36,9 @@ export class MovieCardComponent {
     this.getMovies();
     this.getCurrentUser();
   }
-  //Gets all movies
+  /**
+ * This is for getting all the movies
+ */
   getMovies(): void {
     this.fetchApiData.getAllMovies().subscribe((resp: any) => {
       this.movies = resp;
@@ -41,7 +47,11 @@ export class MovieCardComponent {
     });
   }
 
-  //Director View
+  /**
+ * This is for getting the director details
+ * @params
+ * @returns
+ */
   openDirectorDialog(name: string, bio: string, birth: string): void {
     this.dialog.open(DirectorCardComponent, {
       data: {
@@ -55,7 +65,9 @@ export class MovieCardComponent {
     console.log(name)
   }
 
-  //Genre view
+  /**
+ * This is for getting the genre details
+ */
   openGenreDialog(name: string, description: string): void {
     this.dialog.open(GenreCardComponent, {
       data: {
@@ -67,7 +79,9 @@ export class MovieCardComponent {
     });
   }
 
-  //Synopsis view
+  /**
+ * This is for getting the details about the movie
+ */
   openSynopsis(title: string, imagePath: any, description: string): void {
     this.dialog.open(SynopsisCardComponent, {
       data: {
@@ -80,7 +94,9 @@ export class MovieCardComponent {
     });
   }
 
-  //Gets the current user
+  /**
+ * This is for getting the present user
+ */
   getCurrentUser(): void {
     const username = localStorage.getItem('user');
     this.fetchApiData.getUserProfile().subscribe((res: any) => {
@@ -92,7 +108,9 @@ export class MovieCardComponent {
     });
   }
 
-  //Adds movie to favorites list
+  /**
+ * This is to add a movie to fav list
+ */
   addToUserFavs(id: string, Title: string): void {
     console.log(id);
     const token = localStorage.getItem('token');
@@ -106,8 +124,9 @@ export class MovieCardComponent {
       this.ngOnInit();
     });
   }
-
-  //Deletes a movie from users favorite movies
+  /**
+ * This is to delete a movie from the fav list
+ */
   deleteFavoriteMovies(id: string, Title: string): void {
     console.log(id)
     this.fetchApiData.deleteFavoriteMovies(id).subscribe((res: any) => {
@@ -121,6 +140,9 @@ export class MovieCardComponent {
     return this.getCurrentUser();
   }
 
+  /**
+ * @returns a boolean value
+ */
   checkFav(id: string): boolean {
     // const movieId = this.currentFavs
   if(this.currentFavs.find((x:any) =>x === id) ) return true
@@ -129,6 +151,9 @@ export class MovieCardComponent {
   //   return true;
   }
 
+  /**
+ * This is to complete the logic for adding/removing movies from fav list
+ */
   addRemoveMovieFromFavs(id: any, title: string) : void {
     if (this.checkFav(id)) {
       this.deleteFavoriteMovies(id, title)

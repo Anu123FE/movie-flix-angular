@@ -9,6 +9,10 @@ import { MatDialogModule } from '@angular/material/dialog';
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss']
 })
+
+/**
+ * This helps with the proper routing
+ */
 export class NavbarComponent implements OnInit {
 
   constructor(

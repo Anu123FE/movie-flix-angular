@@ -9,6 +9,9 @@ import { FetchApiDataService  } from '../fetch-api-data.service';
   templateUrl: './user-edit.component.html',
   styleUrls: ['./user-edit.component.scss']
 })
+/**
+ * This gives the accesss to the user to edit the user credentials
+ */
 export class UserEditComponent implements OnInit {
   Username = localStorage.getItem('user');
   user: any = {};
@@ -30,6 +33,9 @@ export class UserEditComponent implements OnInit {
   ngOnInit(): void {
     this.getUser();
   }
+  /**
+ * This gives the user details
+ */
   getUser(): void {
     this.fetchApiData.getUserProfile().subscribe((resp: any) => {
       this.user = resp;
@@ -37,6 +43,10 @@ export class UserEditComponent implements OnInit {
       return this.user
     });
   }
+
+  /**
+ * this function allows the user to edit and save his/her credentails
+ */
   
   editUserProfile(): void {
     this.fetchApiData.editUserProfile(this.userData).subscribe((resp: any) => {
