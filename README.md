@@ -28,7 +28,7 @@
 # Challenges Faced and The Learning Experience:
 - Each endpoint needs its own component to be created. While creating the component was easy, it was difficult to link 1 component to the other. I had missed adding the correct imports and exports which I later rectified by trial and error
 - I faced a lot of issues routing the path to the correct endpoints, the end point path had to eb the exact same as was defined in the movieapi and this was a little tedious
-- I also found adding a background image to my welcome page really difficult. I found that the relative path I had added was wrong and I rectified this which lead to the resolution of this issue
+- I also found adding a background image to my welcome page really difficult. I found that the relative path I had added was wrong and I rectified this which lead to the resolution of this issue, but I ended up removing the background image as it looked too busy.
 - Another aspect that I found really difficult was adding and removing a movie to/from a user's favorite movie list. I used the <mat-icon> feature of angular to resolve this but then I had to add in a logic which checked if a movie was included in the list and then it changed the mat-icon from an 'unfilled heart' to a 'filled heart' (or vice versa) depending on whether the movie was being added to the list or removed from the list
 - The styling of the app also took a little time as I had to use SCSS which is a bit different from CSS
 - I realised how important it is to use Chrome DEV TOOLS. I used to have bugs caused due to typos in my code which are really card to find. Running the app on the local host and then inspecting the page using Chrome Dev Tools made debugging so much more easier
