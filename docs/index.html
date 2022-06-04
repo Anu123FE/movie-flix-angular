@@ -2,12 +2,128 @@
 <a href="#myflixangularclient" id="myflixangularclient" style="color: inherit; text-decoration: none;">
   <h1>MyFlixAngularClient</h1>
 </a>
-<p>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 13.3.3.</p>
+<ul>
+<li>This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> version 13.3.3.</li>
+</ul>
+
+<a href="#description" id="description" style="color: inherit; text-decoration: none;">
+  <h1>Description:</h1>
+</a>
+<ul>
+<li>This project is the client side for the myFlix App and it uses the server side aspect from myFlix (REST API and its database from Mongo DB Atlas)</li>
+</ul>
+
+<a href="#user-stories" id="user-stories" style="color: inherit; text-decoration: none;">
+  <h1>User Stories:</h1>
+</a>
+<ul>
+<li>As a user, I want to be able to register/ login to see the list of movies. I would also like to see the details of the movie&#39;s directors and genres so that I can decide which movies I like.</li>
+<li>As a user, I want to be able to create a profile so I can add/ remove a movie from my favorite movies list</li>
+<li>As a user, I want to be able to edit my profile so that I can make any changes to my User Profile as needed</li>
+</ul>
+
+<a href="#main-features" id="main-features" style="color: inherit; text-decoration: none;">
+  <h1>Main Features:</h1>
+</a>
+<ul>
+<li>Upon launch of the website, the user sees a welcome page, which has the options - Sign Up (for new users), Login (for returning users), All movies and Profile</li>
+<li>Upon signing up (for a new user), the user is prompted to login</li>
+<li>The user then enteers the username and password to login</li>
+<li>Once authenticated, the user is shown a list of movies</li>
+<li>The user can add or delete a favorite movie to/from the list</li>
+<li>The user can also click on the director&#39;s name to see more info about the movie&#39;s director</li>
+<li>The user can click on the genre to see more details about the movie&#39;s genre</li>
+<li>The user is also able to edit his/her profile details</li>
+</ul>
+
+<a href="#tech-used" id="tech-used" style="color: inherit; text-decoration: none;">
+  <h1>Tech Used:</h1>
+</a>
+<p>  Angular is used for this project as it is most easily used for complex UIs (as is the case for this app) and also cause it has ready to use components   which come set up. It is easy to use, as me especially as a beginner developer, I did not have to write the skeletal framework of the components from     scratch.</p>
+<ul>
+<li>Angular</li>
+<li>Material Library</li>
+</ul>
+
+<a href="#challenges-faced-and-the-learning-experience" id="challenges-faced-and-the-learning-experience" style="color: inherit; text-decoration: none;">
+  <h1>Challenges Faced and The Learning Experience:</h1>
+</a>
+<ul>
+<li>Each endpoint needs its own component to be created. While creating the component was easy, it was difficult to link 1 component to the other. I had missed adding the correct imports and exports which I later rectified by trial and error</li>
+<li>I faced a lot of issues routing the path to the correct endpoints, the end point path had to eb the exact same as was defined in the movieapi and this was a little tedious</li>
+<li>I also found adding a background image to my welcome page really difficult. I found that the relative path I had added was wrong and I rectified this which lead to the resolution of this issue</li>
+<li>Another aspect that I found really difficult was adding and removing a movie to/from a user&#39;s favorite movie list. I used the <mat-icon> feature of angular to resolve this but then I had to add in a logic which checked if a movie was included in the list and then it changed the mat-icon from an &#39;unfilled heart&#39; to a &#39;filled heart&#39; (or vice versa) depending on whether the movie was being added to the list or removed from the list</li>
+<li>The styling of the app also took a little time as I had to use SCSS which is a bit different from CSS</li>
+<li>I realised how important it is to use Chrome DEV TOOLS. I used to have bugs caused due to typos in my code which are really card to find. Running the app on the local host and then inspecting the page using Chrome Dev Tools made debugging so much more easier</li>
+</ul>
+
+<a href="#end-points" id="end-points" style="color: inherit; text-decoration: none;">
+  <h1>End Points:</h1>
+</a>
+<ul>
+<li>New User registration</li>
+<li>User login</li>
+<li>Get all the movies in the database</li>
+<li>Get the details of a specific movie</li>
+<li>Get the details of the genre of the specific movie</li>
+<li>Get the details of the director of a specific movie</li>
+<li>Edit the user profile</li>
+<li>Delete the user profile</li>
+<li>Add a movie to a user&#39;s favorite list</li>
+<li>Remove a movie from a user&#39;s favorite list</li>
+</ul>
+
+<a href="#development-process" id="development-process" style="color: inherit; text-decoration: none;">
+  <h1>Development Process:</h1>
+</a>
+<ul>
+<li>Install Angular</li>
+<li>Create a new Angular project</li>
+<li>Navigate to project folder to run project</li>
+<li>Install project to load data from the movie_api (database on MongoDB) using angular HttpClient</li>
+<li>Add the imports to fetch-api-data.service.ts</li>
+<li>Add in the code for linking the end points (mentioned above) to the respective components for all API calls</li>
+<li>Install MaterialUI library</li>
+<li>Use NgModule to complete the imports</li>
+<li>Create components for each endpoint</li>
+<li>Add routing</li>
+<li>Commit and push all the commits to the GitHub repo linked to the project</li>
+<li>Publish the project on GitHub pages using the -ghpages cli</li>
+</ul>
+
+<a href="#screen-shots-included" id="screen-shots-included" style="color: inherit; text-decoration: none;">
+  <h1>Screen Shots Included:</h1>
+</a>
+<ul>
+<li><p>Welcome Screen:</p>
+<img width="1608" alt="welcome page" src="https://user-images.githubusercontent.com/80176993/171068116-8ad15692-b326-471e-8509-49d71423d2e9.png">
+</li>
+<li><p>Sign Up Screen:</p>
+<img width="1286" alt="Sign Up Page" src="https://user-images.githubusercontent.com/80176993/171068190-d9398e1e-bf14-4875-8fd1-115454b49c02.png">
+</li>
+<li><p>Login Screen:</p>
+<img width="1082" alt="Login Page" src="https://user-images.githubusercontent.com/80176993/171068291-969ac44a-fba8-42ea-ab52-689334f5a688.png">
+</li>
+<li><p>Home Screen:</p>
+<img width="1455" alt="Movie Screen" src="https://user-images.githubusercontent.com/80176993/171068369-2161afd6-8c97-4514-a4c9-c52409819b9d.png">
+</li>
+<li><p>Adding Movies To Favorite List (using the mat-icon):</p>
+<img width="1499" alt="Added to List" src="https://user-images.githubusercontent.com/80176993/171068518-0bf7340c-1bb5-4668-88f0-341df7b1ff97.png">
+</li>
+<li><p>Removing Movies From the Favorite List (using mat-icon):</p>
+<img width="1391" alt="Remove movie" src="https://user-images.githubusercontent.com/80176993/171069098-615f073c-e530-4027-8f28-1106a35013f3.png">
+</li>
+<li><p>Profile View:</p>
+<img width="1022" alt="Profile View" src="https://user-images.githubusercontent.com/80176993/171068612-95c6075e-44ff-450c-91ba-500b4d66dbbb.png">
+</li>
+<li><p>Kanban Board I Used For This Project&#39;s Work:</p>
+ <img width="1625" alt="Kanban Board" src="https://user-images.githubusercontent.com/80176993/171068770-687000d2-b440-4b96-8aec-c1973a7f2feb.png"></li>
+</ul>
 
 <a href="#development-server" id="development-server" style="color: inherit; text-decoration: none;">
   <h2>Development server</h2>
 </a>
-<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The application will automatically reload if you change any of the source files.</p>
+<p>Run <code>ng serve</code> for a dev server. Navigate to <a href="https://anu123fe.github.io/movie-flix-angular/welcome">Here</a>. The application will automatically reload if you change any of the source files.</p>
 
 <a href="#code-scaffolding" id="code-scaffolding" style="color: inherit; text-decoration: none;">
   <h2>Code scaffolding</h2>
@@ -33,4 +149,4 @@
   <h2>Further help</h2>
 </a>
 <p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://angular.io/cli">Angular CLI Overview and Command Reference</a> page.</p>
-</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Modules</a></li><li class=" tsd-kind-module"><a href="modules/director_card_director_card_component.html">director-<wbr/>card/director-<wbr/>card.component</a></li><li class=" tsd-kind-module"><a href="modules/fetch_api_data_service.html">fetch-<wbr/>api-<wbr/>data.service</a></li><li class=" tsd-kind-module"><a href="modules/genre_card_genre_card_component.html">genre-<wbr/>card/genre-<wbr/>card.component</a></li><li class=" tsd-kind-module"><a href="modules/movie_card_movie_card_component.html">movie-<wbr/>card/movie-<wbr/>card.component</a></li><li class=" tsd-kind-module"><a href="modules/navbar_navbar_component.html">navbar/navbar.component</a></li><li class=" tsd-kind-module"><a href="modules/profile_view_profile_view_component.html">profile-<wbr/>view/profile-<wbr/>view.component</a></li><li class=" tsd-kind-module"><a href="modules/synopsis_card_synopsis_card_component.html">synopsis-<wbr/>card/synopsis-<wbr/>card.component</a></li><li class=" tsd-kind-module"><a href="modules/user_edit_user_edit_component.html">user-<wbr/>edit/user-<wbr/>edit.component</a></li><li class=" tsd-kind-module"><a href="modules/user_login_form_user_login_form_component.html">user-<wbr/>login-<wbr/>form/user-<wbr/>login-<wbr/>form.component</a></li><li class=" tsd-kind-module"><a href="modules/welcome_page_welcome_page_component.html">welcome-<wbr/>page/welcome-<wbr/>page.component</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>
+</div></div><div class="col-4 col-menu menu-sticky-wrap menu-highlight"><nav class="tsd-navigation primary"><ul><li class="current"><a href="modules.html">Modules</a></li><li class=" tsd-kind-module"><a href="modules/director_card_director_card_component.html">director-<wbr/>card/director-<wbr/>card.component</a></li><li class=" tsd-kind-module"><a href="modules/fetch_api_data_service.html">fetch-<wbr/>api-<wbr/>data.service</a></li><li class=" tsd-kind-module"><a href="modules/genre_card_genre_card_component.html">genre-<wbr/>card/genre-<wbr/>card.component</a></li><li class=" tsd-kind-module"><a href="modules/movie_card_movie_card_component.html">movie-<wbr/>card/movie-<wbr/>card.component</a></li><li class=" tsd-kind-module"><a href="modules/navbar_navbar_component.html">navbar/navbar.component</a></li><li class=" tsd-kind-module"><a href="modules/profile_view_profile_view_component.html">profile-<wbr/>view/profile-<wbr/>view.component</a></li><li class=" tsd-kind-module"><a href="modules/synopsis_card_synopsis_card_component.html">synopsis-<wbr/>card/synopsis-<wbr/>card.component</a></li><li class=" tsd-kind-module"><a href="modules/user_edit_user_edit_component.html">user-<wbr/>edit/user-<wbr/>edit.component</a></li><li class=" tsd-kind-module"><a href="modules/user_login_form_user_login_form_component.html">user-<wbr/>login-<wbr/>form/user-<wbr/>login-<wbr/>form.component</a></li><li class=" tsd-kind-module"><a href="modules/user_registration_form_user_registration_form_component.html">user-<wbr/>registration-<wbr/>form/user-<wbr/>registration-<wbr/>form.component</a></li><li class=" tsd-kind-module"><a href="modules/welcome_page_welcome_page_component.html">welcome-<wbr/>page/welcome-<wbr/>page.component</a></li></ul></nav></div></div></div><footer class="with-border-bottom"><div class="container"><h2>Legend</h2><div class="tsd-legend-group"><ul class="tsd-legend"><li class="tsd-kind-class"><span class="tsd-kind-icon">Class</span></li></ul></div><h2>Settings</h2><p>Theme <select id="theme"><option value="os">OS</option><option value="light">Light</option><option value="dark">Dark</option></select></p></div></footer><div class="container tsd-generator"><p>Generated using <a href="https://typedoc.org/" target="_blank">TypeDoc</a></p></div><div class="overlay"></div><script src="assets/main.js"></script></body></html>

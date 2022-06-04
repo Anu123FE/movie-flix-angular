@@ -186,9 +186,9 @@ editUserProfile(userData: object): Observable<any> {
  */
 public deleteUserProfile(): Observable<any> {
   const token = localStorage.getItem('token');
-  const username = localStorage.getItem('username');
+  const username = localStorage.getItem('user');
   return this.http
-    .delete(apiUrl + `users/${username}`, {
+    .delete(apiUrl + `/users/${username}`, {
       headers: new HttpHeaders({
         Authorization: 'Bearer ' + token,
       }),

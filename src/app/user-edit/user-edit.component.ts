@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { MatDialogRef } from '@angular/material/dialog';
 import { FetchApiDataService  } from '../fetch-api-data.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-user-edit',
@@ -27,7 +27,8 @@ export class UserEditComponent implements OnInit {
   constructor(
     public fetchApiData: FetchApiDataService,
     public dialogRef: MatDialogRef<UserEditComponent>,
-    public snackBar: MatSnackBar
+    public snackBar: MatSnackBar,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
@@ -60,6 +61,24 @@ export class UserEditComponent implements OnInit {
       });
     });
   }
+
+     /**
+ * This is for setting the user deletion
+ */
+      deleteUserProfile(): void {
+        if (confirm('Are your sure? This can\'t be undone.')) {
+          this.router.navigate(['welcome']).then(() => {
+            this.snackBar.open('Deleted', 'OK', {
+              duration: 6000,
+              verticalPosition: 'top'
+            });
+          });
+          this.router.navigate(['welcome'])
+          this.fetchApiData.deleteUserProfile().subscribe(() => {
+            localStorage.clear();
+          });
+        }
+      }
 
   closeDialog(): void {
     this.dialogRef.close();
