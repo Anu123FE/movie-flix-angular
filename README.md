@@ -1,6 +1,7 @@
 # MyFlixAngularClient
 
 - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.3.
+- Project is published at: https://Anu123FE.github.io/movie-flix-angular/
 
 # Description:
 - This project is the client side for the myFlix App and it uses the server side aspect from myFlix (REST API and its database from Mongo DB Atlas)
