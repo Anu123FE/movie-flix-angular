@@ -162,4 +162,9 @@ export class MovieCardComponent {
       this.addToUserFavs(id, title)
     }
   }
+  
+  goBack(){
+    window.location.replace("/welcome")
+  }
 }
+

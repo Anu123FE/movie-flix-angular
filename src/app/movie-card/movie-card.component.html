@@ -1,5 +1,7 @@
 
 <div class="movie-card" style="display: flex">
+  
+
 <mat-card *ngFor="let movie of movies; let i=index;">
     <mat-card-header>
         <mat-card-title class="movies-title">{{movie.Title}}</mat-card-title>
@@ -56,3 +58,12 @@
         </mat-card-actions>
       </mat-card>
     </div>
+
+    <div class="user-profile">
+      <button
+         mat-raised-button
+         (click)="goBack()"
+         class="edit-profile-button"> 
+         <mat-icon>arrow_back</mat-icon>
+          Back
+       </button>
