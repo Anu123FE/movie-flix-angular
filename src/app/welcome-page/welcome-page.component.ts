@@ -5,6 +5,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { MovieCardComponent } from '../movie-card/movie-card.component';
 import { ProfileViewComponent } from '../profile-view/profile-view.component';
 import { UserEditComponent } from '../user-edit/user-edit.component';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-welcome-page',
@@ -16,7 +17,8 @@ import { UserEditComponent } from '../user-edit/user-edit.component';
  */
 export class WelcomePageComponent implements OnInit {
 
-  constructor(public dialog: MatDialog) { }
+  constructor(public dialog: MatDialog,
+    public router: Router) { }
   ngOnInit(): void {
   }
   /**
@@ -39,18 +41,21 @@ openUserLoginDialog(): void {
  * This is the function that will open the movie-cards when the all movies button is clicked
  */
   openMoviesDialog(): void {
-    this.dialog.open(MovieCardComponent, {
-      width: '80%',
-      height: '80%'
-    });
+    // this.dialog.open(MovieCardComponent, {
+    //   width: '80%',
+    //   height: '80%'
+    // });
+    this.router.navigate(['movies']);
   }
   /**
  * This is the function that will open the user profile dialog box when the profile button is clicked
  */
   openProfileDialog() {
-    this.dialog.open(UserEditComponent, {
-      width: '50%',
-      height: '80%'
-    });
+    // this.dialog.open(UserEditComponent, {
+    //   width: '50%',
+    //   height: '80%'
+    // });
+    this.router.navigate(['profile']);
   }
+  
 }
