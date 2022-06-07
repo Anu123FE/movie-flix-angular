@@ -9,6 +9,7 @@
       (click)="openUserRegistrationDialog()"
       style="margin-right: 10px;"
       color="primary"
+      *ngIf="!checkUser()"
     >
       Sign Up
     </button>
@@ -17,14 +18,16 @@
       color="primary"
       (click)="openUserLoginDialog()"
       style="margin-right: 10px;"
+      *ngIf="!checkUser()"
     >
       Login
     </button>
-  
+
     <button
     mat-raised-button
     color="primary"
     (click)="openMoviesDialog()"
+    *ngIf="checkUser()"
     style="margin-right: 10px;"
   >
     All Movies
@@ -33,8 +36,21 @@
   <button
   mat-raised-button
   color="primary"
+  *ngIf="checkUser()"
   (click)="openProfileDialog()"
 >
   Profile
 </button>
+
+<button
+      mat-raised-button
+      color="warn"
+      (click)="openUserLoginDialog()"
+      style="margin-left: 10px;"
+      *ngIf="checkUser()"
+      (click)="logOut()"
+    >
+      Log out
+</button>
+
   </div>

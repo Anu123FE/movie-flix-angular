@@ -1,6 +1,15 @@
 <div class="background">
 
     <div class="user-profile">
+     
+      <button
+      mat-raised-button
+      (click)="goBack()"
+      class="edit-profile-button"> 
+      <mat-icon>arrow_back</mat-icon>
+      Back
+  </button>
+
       <mat-card class="user-profile-card">
         <mat-card-header class="user-profile-header">
             <mat-card-title>Profile Information</mat-card-title>
@@ -31,9 +40,6 @@
         </mat-card-actions>
     </mat-card>
       
-      <div class="favorite-movies-header">
-        <h2 class="mat-card-favorite-movies">Favorite Movies</h2>
-    </div>
     <div class="favorite-movies-container">
         <mat-card *ngFor="let movie of favoriteMovies;" class="favorite-movies">
             <mat-card-header class="favorite-movies-title-header">

@@ -170,5 +170,9 @@ export class ProfileViewComponent implements OnInit {
       }, 4000);
     });
   }
+
+  goBack(){
+    window.location.replace("/welcome")
+  }
 }
 

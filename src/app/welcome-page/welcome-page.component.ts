@@ -58,4 +58,16 @@ openUserLoginDialog(): void {
     this.router.navigate(['profile']);
   }
   
+  checkUser() {
+    if (localStorage.getItem('user')){
+      return true;
+    }
+    else {
+      return false
+    }
+  }
+
+  logOut() {
+    localStorage.clear();
+  }
 }
