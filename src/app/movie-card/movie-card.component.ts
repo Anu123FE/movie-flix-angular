@@ -164,7 +164,7 @@ export class MovieCardComponent {
   }
   
   goBack(){
-    window.location.replace("/welcome")
+    window.location.replace("/welcome");
   }
 }
 
