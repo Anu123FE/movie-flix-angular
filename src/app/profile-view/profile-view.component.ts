@@ -172,7 +172,7 @@ export class ProfileViewComponent implements OnInit {
   }
 
   goBack(){
-    window.location.replace("/welcome")
+    window.location.replace("/movie-flix-angular/welcome");
   }
 }
 
